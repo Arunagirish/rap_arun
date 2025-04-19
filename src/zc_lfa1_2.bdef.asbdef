@@ -1,0 +1,34 @@
+projection implementation in class zbp_c_lfa1_2 unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_lfa1_2 //alias <alias_name>
+use etag
+{
+
+  use action edit;
+  use action activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use create(augment);
+  use update(augment);
+  use delete;
+  use action ins_non_factory;
+  use action static_non_factory;
+  use action ins_factory;
+  use action static_factory;
+  use function ins_function;
+  use function static_function;
+  use function GetDefaultsForCreate;
+  use association _lfb1 { create; with draft; }
+}
+
+define behavior for ZC_LFB1_2 //alias <alias_name>
+use etag
+{
+  use update;
+  use delete;
+
+  use association _lfa1 {with draft;}
+}

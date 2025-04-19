@@ -1,0 +1,57 @@
+@Metadata.layer: #CUSTOMER
+@EndUserText.label: 'Supplier'
+@UI.headerInfo: {
+    typeName: 'Supplier',
+    typeNamePlural: 'Suppliers',
+    title: {
+        type: #STANDARD,
+        label: '',
+        value: 'Name1',
+        targetElement: ''
+    }
+}
+//@Search.searchable: true
+annotate entity ZC_lfa1_2
+    with
+{
+      @UI.facet: [
+      {
+          type: #IDENTIFICATION_REFERENCE,
+          position: 10,
+          purpose: #STANDARD,
+          label: 'Supplier'
+      }
+      ,
+      {
+      type: #LINEITEM_REFERENCE,
+          position: 20,
+          purpose: #STANDARD,
+          label: 'Company code',
+          targetElement: '_lfb1'
+      }]
+      @UI.lineItem: [{ position: 10 }]
+      @UI.identification: [{ position: 10 }]
+            @Search.defaultSearchElement: true
+            @Search.fuzzinessThreshold: 0.8
+            
+         @UI.selectionField: [{ position: 10 }]
+         @EndUserText.label: 'vendor no'
+      Lifnr;
+      @UI.identification: [{position:20 }]
+      @UI.lineItem: [{position:20, type: #FOR_ACTION,  dataAction: 'ins_non_factory' , label: 'ins_non_factory'  },
+//                     {position:20, type: #FOR_ACTION,  dataAction: 'static_non_factory' , label: 'static_non_factory'  } ,
+//                     {position:20, type: #FOR_ACTION,  dataAction: 'ins_factory' , label: 'ins_factory'  },
+//                     {position:20, type: #FOR_ACTION,  dataAction: 'static_factory' , label: 'static_factory'  
+ {position:20, type: #FOR_ACTION,  dataAction: 'ins_function' , label: 'ins_function'
+                     }  ]
+//      @UI.identification: [{ position: 20 }]
+      @Search.defaultSearchElement: true
+      @UI.selectionField: [{ position: 20 }]
+      @EndUserText.label: 'country'
+      Land1;
+       @UI.selectionField: [{ position: 30 }]
+      @UI.lineItem: [{ position: 30 }]
+      @UI.identification: [{ position: 30 }]
+      @EndUserText.label: 'name'
+      Name1;
+};

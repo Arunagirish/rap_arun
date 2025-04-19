@@ -1,0 +1,5 @@
+@EndUserText.label: 'service definition'
+define service ZUI_LFA1_2 {
+  expose ZC_lfa1_2;
+  expose ZC_LFB1_2;
+}
