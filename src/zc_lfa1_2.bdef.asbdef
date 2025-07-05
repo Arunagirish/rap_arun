@@ -1,6 +1,8 @@
 projection implementation in class zbp_c_lfa1_2 unique;
 strict ( 2 );
 use draft;
+use side effects;
+
 define behavior for ZC_lfa1_2 //alias <alias_name>
 use etag
 {
@@ -14,7 +16,7 @@ use etag
   use create(augment);
   use update(augment);
   use delete;
-  use action ins_non_factory;
+//  use action ins_non_factory;
   use action static_non_factory;
   use action ins_factory;
   use action static_factory;

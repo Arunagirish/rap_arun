@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "proj_managed23"
+  },
+  "ui5AppDetails": {
+    "appId": "project2managedrap"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A0DCCEC1DB77E1F86666C7EB08B09C9B10754479_TM",
+    "semanticObject": "proj_managed23",
+    "action": "proj_managed23",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A0DCCEC1DB77E1F86666C7EB08B09C9B10754479_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "proj_managed23"
+      }
+    }
+  ]
+}

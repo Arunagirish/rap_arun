@@ -12,5 +12,6 @@ association to parent ZI_lfa1_2 as _lfa1 on $projection.Lifnr = _lfa1.Lifnr
 {
     key lifnr as Lifnr,
     key bukrs as Bukrs,
+    _lfa1.Land1 as assocaited_land1,
     _lfa1
 }

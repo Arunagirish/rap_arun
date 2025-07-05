@@ -2,14 +2,9 @@
 "BASEINFO":
 {
 "FROM":
-[
-"ZI_LFA1_2",
-"ZLFB1"
-],
+[],
 "ASSOCIATED":
-[
-"ZI_LFA1_2"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":

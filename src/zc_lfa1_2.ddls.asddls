@@ -3,6 +3,7 @@
 @Metadata.ignorePropagatedAnnotations: true
 @Metadata.allowExtensions: true
 @VDM.viewType: #CONSUMPTION
+@AbapCatalog.extensibility.allowNewCompositions: true
 define root view entity ZC_lfa1_2
   provider contract transactional_query as projection on ZI_lfa1_2
 {

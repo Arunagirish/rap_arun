@@ -39,10 +39,10 @@ annotate entity ZC_lfa1_2
       Lifnr;
       @UI.identification: [{position:20 }]
       @UI.lineItem: [{position:20, type: #FOR_ACTION,  dataAction: 'ins_non_factory' , label: 'ins_non_factory'  },
-//                     {position:20, type: #FOR_ACTION,  dataAction: 'static_non_factory' , label: 'static_non_factory'  } ,
-//                     {position:20, type: #FOR_ACTION,  dataAction: 'ins_factory' , label: 'ins_factory'  },
-//                     {position:20, type: #FOR_ACTION,  dataAction: 'static_factory' , label: 'static_factory'  
- {position:20, type: #FOR_ACTION,  dataAction: 'ins_function' , label: 'ins_function'
+                     {position:20, type: #FOR_ACTION,  dataAction: 'static_non_factory' , label: 'static_non_factory'  } ,
+                     {position:20, type: #FOR_ACTION,  dataAction: 'ins_factory' , label: 'ins_factory'  },
+                     {position:20, type: #FOR_ACTION,  dataAction: 'static_factory' , label: 'static_factory'},
+                     {position:20, type: #FOR_ACTION,  dataAction: 'ins_function' , label: 'ins_function'
                      }  ]
 //      @UI.identification: [{ position: 20 }]
       @Search.defaultSearchElement: true

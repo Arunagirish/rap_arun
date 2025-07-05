@@ -1,8 +1,5 @@
-@EndUserText.label: 'abstract class for input parameters'
+@EndUserText.label: '.'
 define abstract entity ZI_D_ABSTRACT
-
 {
-@EndUserText.label: 'Give name of country to be changed'
-    user_param : abap.char( 10 );
-    
+   user_param : abap.char(10);    
 }

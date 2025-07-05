@@ -1,14 +1,18 @@
 managed with additional save implementation in class zbp_i_lfa1_2 unique;
 strict ( 2 );
 with draft;
-define behavior for ZI_lfa1_2 //alias <alias_name>
+define behavior for ZI_lfa1_2  //alias <alias_name>
 draft table zdlfa1_2
 persistent table zlfa1
 lock master
 total etag Changed_on
 authorization master ( instance,global )
+//early numbering
 etag master Changed_on
 {
+
+  side effects {field Name1 affects field Land1;}
+  determination modify_determination on modify{field Name1;}
 
   draft action edit with additional implementation;
   draft action activate;
@@ -16,10 +20,9 @@ etag master Changed_on
   draft action Resume;
   draft determine action Prepare;
 
-   determination modify_determination on modify{field Name1;}
   determination save_determination on save{delete;}
-  validation date on save { create; }
-  action(precheck)  ins_non_factory parameter ZI_D_ABSTRACT result[1] $self;
+  validation check_country on save { create; }
+//  action(precheck)  ins_non_factory parameter ZI_D_ABSTRACT result[1] $self;
   static action static_non_factory ;
   factory action ins_factory[1];
   static factory action static_factory[1];
@@ -27,10 +30,16 @@ etag master Changed_on
   static function static_function result[1] $self;
   save(adjustnumbers) action save_action;
 
+ //  define event
+
+  event CreateBP parameter ZI_D_ABSTRACT;
+  event CreateBpSideffect for side effects;
+//  side effects { event CreateBpSideffect affects field (Land1 ); }
+
   create{ default function GetDefaultsForCreate; }
   update(precheck);
   delete;
-  field ( numbering : managed, readonly) Lifnr;
+  field ( numbering : managed, readonly ) Lifnr;
 
   association _lfb1 { create;with draft; }
     mapping for zlfa1
@@ -44,9 +53,10 @@ etag master Changed_on
 
 define behavior for ZI_lfb1_2 //alias <alias_name>
 draft table zlfb1_2
-persistent table zlfb1
+persistent table zlfb1_2
 lock dependent by _lfa1
 authorization dependent by _lfa1
+//early numbering
 etag dependent by _lfa1
 {
   update;
